@@ -10,6 +10,7 @@ import project.model.Order;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @Component
@@ -21,7 +22,8 @@ public class DataHolder {
         public static final List<Bread> breads = new ArrayList<>();
         public static final List<Ingredient> ingredients = new ArrayList<>();
 
-        @PostConstruct
+
+    @PostConstruct
         public void init() {
             burgers.add(new Burger( "Classic Burger","Бургер, Леб, Јунешка плескавица, Кисели краставички, Кромид, Сенф, ФХ сос"));
             burgers.add(new Burger( "Classic Cheeseburger","Бургер, Леб, Јунешка плескавица,Млечен кашкавал, Кисели краставички, Кромид, Сенф, ФХ сос"));
@@ -55,6 +57,6 @@ public class DataHolder {
 
 
 
-            // orders.add(new Order("cv","cd","cdc"));
+            orders.add(new Order(burgers.get(3),"Sara","SD Goce,0","070123456", (long) 1));
         }
 }
