@@ -11,20 +11,35 @@
     <title>Burger Order page - Welcome and choose your burger</title>
     <style type="text/css">
         body {
+            background-color: red;
             width: 800px;
             margin: auto;
+
+        }
+        h1,h2 {
+        color:yellow;
+        }
+        button {
+        color:black;
+        background-color:yellow;
+        }
+        img {
+
         }
     </style>
 </head>
 <body>
 <header>
-    <h1 class="pt-5">Добредојдовте на нашата онлајн страна за нарачка на бургери!</h1>
+    <div>
+    <h2 class="pt-5">Добредојдовте на нашата онлајн страна за нарачка на бургери!</h2>
+    <img src="frontend/public/fh.png">
+    </div>
 </header>
 <main>
     <div class="burger">
         <div class="row pt-5">
             <main class="container">
-                <h2>Изберете го вашиот бургер:</h2>
+                <h3>Изберете го вашиот бургер:</h3>
                 <form method="post" action="/selectBurger.do">
                     <div th:each="burger : ${burgers}">
                         <input type="radio" name="burger" th:value="${burger.name}"><span th:text="${burger.name}"></span><br/>
