@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Bread Type</title>
+    <style type = "text/css">
+        body {
+            width: 800px;
+            margin: auto;
+        }
+        table {
+            width:100%;
+        }
+        table, td, th {
+            border: 1px solid black;
+            padding:3px 2px;
+        }
+        section {
+            float: left;
+            margin: 0 1.5%;
+            width: 63%;
+        }
+        aside {
+            float: right;
+            margin: 0 1.5%;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Нарачка на Бургер - Тип на леб </h1>
+</header>
+<section>
+    <h2>Изберете тип на лепче:</h2>
+    <form th:action="@{/BurgerOrder.do}" method="POST">
+
+        <input type="radio" name="bread_type" value="White"> Бело лепче <br/>
+        <input type="radio" name="bread_type" value="Integral"> Интегрално лепче <br/>
+
+        <br/>
+        <input type="submit" value="Submit">
+        <br/>
+    </form>
+</section>
+
+<aside>
+    <table>
+        <tr>
+            <th colspan="2">
+                ВАШАТА НАРАЧКА
+            </th>
+        </tr>
+        <tr>
+            <td><b>БУРГЕР </b></td>
+            <td><p th:text="${burgername}"></p></td>
+
+        </tr>
+    </table>
+</aside>
+</form>
+
+</body>
+</html>

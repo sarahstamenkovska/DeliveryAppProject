@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Confirmation Info</title>
+    <style type="text/css">
+        body {
+            width: 800px;
+            margin: auto;
+        }
+        table {
+            width:100%;
+        }
+        table, td, th {
+            border: 1px solid black;
+            padding: 3px 2px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <header>
+        <h1>Нарачка на Бургер - Информации за нарачката </h1>
+    </header>
+    <form method="POST" th:action="@{/ConfirmationInfo.do}">
+
+        <table>
+            <tr>
+                <th colspan="2">
+                    ВАШАТА НАРАЧКА
+                </th>
+            </tr>
+            <tr>
+                <td><b>ИМЕ</b></td>
+                <td> <p th:text="${clientName}"></p></td>
+            </tr>
+            <tr>
+                <td><b>АДРЕСА ЗА ИСПОРАКА</b></td>
+                <td th:text="${clientAddress}"></td>
+            </tr>
+            <tr>
+                <td><b>ТЕЛЕФОН ЗА КОНТАКТ</b></td>
+                <td th:text="${clientPhone}"></td>
+            </tr>
+
+            <tr>
+                <td><b>БУРГЕР</b></td>
+                <td th:text="${burgername}"></td>
+            </tr>
+            <tr>
+                <td><b>ЛЕПЧЕ</b></td>
+                <td th:text="${bread_type}"></td>
+            </tr>
+        </table>
+    </form>
+    <div>
+        <form method="get" th:action="@{/map}">
+            <input type="submit" value="Следете ја вашата нарачка">
+        </form>
+    </div>
+</section>
+</body>
+</html>

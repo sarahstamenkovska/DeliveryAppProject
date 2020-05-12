@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/all.css" rel="stylesheet">
+
+    <title>Maps</title>
+    <style type="text/css">
+        body {
+            width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h3 class="pt-5">Може да ја следите вашата нарачка со клик на копчето СЛЕДИ.</h3>
+</header>
+<main>
+    <div class="map">
+        <div class="row pt-5">
+            <main class="container">
+                <form method="post">
+                    <div>
+                        <a th:href="${url}">СЛЕДИ</a>
+                    </div>
+                    <br/>
+                </form>
+            </main>
+        </div>
+    </div>
+</main>
+</body>
+</html>
